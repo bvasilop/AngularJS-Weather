@@ -18,6 +18,6 @@ describe('Controller: ForecastCtrl', function () {
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(ForecastCtrl.awesomeThings.length).toBe(3);
+    expect($scope.forecastData).toBe(3);
   });
 });

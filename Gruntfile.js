@@ -28,7 +28,15 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-
+    /*autoprefixer: {
+        options: {
+          // Task-specific options go here.
+        },
+        your_target: {
+          // Target-specific file lists and/or options go here.
+        },
+      },
+    })*/
     // Project settings
     yeoman: appConfig,
 
@@ -46,6 +54,7 @@ module.exports = function (grunt) {
         }
       }
     },
+
 
 
     // Watches files for changes and runs tasks based on the changed files
@@ -67,7 +76,7 @@ module.exports = function (grunt) {
       },
       sass: {
           files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-          tasks: ['sass:server', 'autoprefixer']
+          tasks: ['sass:server']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -475,7 +484,9 @@ module.exports = function (grunt) {
       }
     }
   });
-
+//grunt-autoprefixer
+//Autoprefixer parses CSS and adds vendor-prefixed CSS properties using the Can I Use database.
+//grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {

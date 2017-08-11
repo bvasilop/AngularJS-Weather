@@ -8,7 +8,7 @@
  * Controller of the angularJsWeatherApp
  */
 angular.module('angularJsWeatherApp')
-.controller('MainCtrl', function ($scope, citysearch, $localStorage) {
+.controller('MainCtrl', function ($scope, citysearch, $localStorage, $window) {
   $scope.citiesFound = citysearch.find();
   $scope.storage = $localStorage;
   $scope.findCities = function(){
@@ -17,4 +17,13 @@ angular.module('angularJsWeatherApp')
          });
          $scope.searchQuery = $scope.location;
      };
+     $scope.removeCity = function() {
+        $window.localStorage.clear();
+        $window.location.reload();
+    };
+
+    $scope.options = {
+        types: ['(cities']
+    };
+
    });

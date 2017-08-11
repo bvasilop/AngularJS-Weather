@@ -1,14 +1,4 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-@import "variables"; // Override default Bootstrap values.
-// bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
-
-@import "content";
-@import "buttons";
-@import "transitions";
-//animations: animate.css
-/*.browsehappy {
+.browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
@@ -16,33 +6,69 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
+  font-style: "Montserrat";
   padding: 0;
+  background-color: $body-bg;
+}
+.forecast-info {
+  color: #e5e5e5;
 }
 
+dl.weather-report {
+    display: inline-block;
+    margin: 1.9em;
+    padding: 0.5em;
+    background: #1c1946;
+}
+
+dl.weather-report.description-dl.ng-scope {
+  width: 200px;
+  height: 220px;
+  border-radius: 1em 1em 0 0;
+  background: $body-bg;
+  text-align: center;
+  font-size: 18px;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
-/*.header,
+.header,
 .marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
 }
+.jumbotron h1 {
+  font-size: 30px;
+
+}
+
+.jumbotron h2 {
+  font-size: 22px;
+}
 
 /* Custom page header */
-/*.header {
+.header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
-  /*h3 {
+  h3 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
   }
 }
-
+dl.weather-report {
+  display: inline-block;
+  margin: 1.5em;
+  padding: 0.5em;
+  background: $gray-darker;
+}
+.city-saved-alert {
+  padding: 0.5em;
+}
 /* Custom page footer */
-/*.footer {
+.footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -53,9 +79,9 @@ body {
 }
 
 /* Main marketing message and sign up button */
-/*.jumbotron {
+.jumbotron, h1{
   text-align: center;
-  border-bottom: 4px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 
   .btn {
     font-size: 21px;
@@ -64,7 +90,7 @@ body {
 }
 
 /* Supporting marketing content */
-/*.marketing {
+.marketing {
   margin: 40px 0;
 
   p + h4 {
@@ -73,25 +99,38 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-/*@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
-  /*.header,
+  .header,
   .marketing,
   .footer {
     padding-left: 0;
     padding-right: 0;
   }
   /* Space out the masthead */
-  /*.header {
+  .header {
     margin-bottom: 30px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
-  /*.jumbotron {
+  .jumbotron {
     border-bottom: 0;
   }
 }
-*/
+/* Views for main content*/
+ul {
+  list-style: none;
+}
+/* Views for forecast*/
+dl.weather-forecast {
+  background: $btn-primary-color ;
+  display: inline-block;
+  margin: 1.5em;
+  text-align: center;
+  padding: 0.75em;
+  border-radius: $list-group-border-radius;
+
+}
