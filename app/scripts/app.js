@@ -42,6 +42,11 @@ angular
         controller: 'ForecastCtrl',
         controllerAs: 'forecast'
       })
+      .when('/5-day-forecast/:cityID', {
+        templateUrl: 'views/5-day-forecast.html',
+        controller: 'ForecastCtrl',
+        controllerAs: 'forecast'
+      })
       .otherwise({
         redirectTo: '/'
       });
