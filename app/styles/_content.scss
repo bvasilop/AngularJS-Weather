@@ -118,13 +118,14 @@ dl.weather-report {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+    width: 100%;
   }
 }
 /* Views for main content*/
 ul {
   list-style: none;
 }
-/* Views for forecast*/
+/* Views for forecast
 dl.weather-forecast {
   background: $btn-primary-color ;
   display: inline-block;
@@ -133,4 +134,173 @@ dl.weather-forecast {
   padding: 0.75em;
   border-radius: $list-group-border-radius;
 
+}
+*/
+/**** current view ****/
+
+
+.calendar-container {
+  position: relative;
+  width: 450px;
+}
+
+.calendar-container .city-info {
+  border-radius: 1em 1em 0 0;
+  background: $body-bg;
+  color: #fff;
+  padding: 3em 2em;
+}
+
+.current-dl {
+  height: 25px;
+}
+
+.city {
+  font-size: 4em;
+  line-height: 1em;
+}
+
+.date {
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: 400;
+}
+.day {
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.month {
+  font-size: 4em;
+  line-height: 1em;
+  text-transform: lowercase;
+}
+
+.icon {
+  float:right;
+  clear: both;
+  margin-top: -130px;
+  font-size: 6em;
+}
+
+.forecast-icon {
+  font-size: 4em;
+  padding: 15px;
+}
+
+.current-description {
+  border: 1px solid $body-bg;
+  padding: 15px 30px;
+  padding-bottom: 200px;
+  margin-bottom: 20px;
+}
+
+/**** Forecast ****/
+.description-dl {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+  height: 100px;
+}
+
+.forecast-container .forecast-info {
+  border-radius: 1em 1em 0 0;
+  background: $body-bg;
+  color: #fff;
+  padding: 3em 2em;
+}
+
+/*.forecast-dt{
+  font-weight:bold;
+  font-size:1.5em;
+  margin-bottom:0.7em;
+}
+.forecast-dd{
+  color:#444;
+  font-size:1em;
+  margin:0 0 2em 0;
+  line-height:1.5em;
+  text-transform: lowercase;
+}*/
+
+.max {
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: 500;
+}
+
+.min {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+.forecast-description {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+/*.weather-report {
+  border-radius: 1em;
+  background: #e66b6b;
+  color: #fff;
+  padding: 3em 2em;
+  width: 100%;
+}*/
+
+.forecast-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.forecast-container .city-info {
+  color: #fff;
+  padding: 3em 2em;
+}
+
+.arrow {
+  left: 2%;
+  position: relative;
+  transform: translate(0px, 250px)
+}
+
+dl.weather-report.description-dl.ng-scope {
+  width: 200px;
+  height: 550px;
+  border-radius: 1em 1em 0 0;
+  background: $body-bg;
+  text-align: center;
+}
+
+.saved-cities-list {
+  margin-bottom: 1em;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $body-bg;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #fff;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1em;
 }
