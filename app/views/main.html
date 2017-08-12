@@ -1,11 +1,17 @@
 <div ng-app ng-controller="MainCtrl">
   <div ng-if="storage.savedCities">
-    <h2>Saved Cities</h2>
-    <p><button class="btn btn-sm btn-primary" ng-click="removeCity()">Clear Cities</button></p>
+
     <ul class="saved-cities-list">
+
+      <h2>Saved Cities</h2>
       <li ng-repeat="city in storage.savedCities">
         <a ng-href="#!/current/{{city.id}}" class="">{{city.name}}</a>
+
       </li>
+
+</div>
+<p><button class="btn btn-sm btn-primary" ng-click="removeCity()">Clear Cities</button></p>
+  </div>
 
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
   <div class="jumbotron">
@@ -29,10 +35,9 @@
             <dt>Temperature</dt>
             <dd>{{city.main.temp}} &deg;F</dd>
             <dd><a ng-href="#!/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
-      </dl>
+          </dl>
+        </div>
+      </p>
     </div>
-  </p>
-</div>
-
-</div>
+  </div>
 </div>

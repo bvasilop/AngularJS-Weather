@@ -1,33 +1,42 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "transitions";
+
+
+//$background-color: #e66b6b;
+//$text-color: #fff;
+
 .browsehappy {
-  margin: 0.2em 0;
+
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
 
+html,
 body {
-  font-style: "Montserrat";
   padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  font: 'Lato', sans-serif;
   background-color: $body-bg;
 }
-.forecast-info {
-  color: #e5e5e5;
+
+dt, dd {
+  font-size: 1.5em;
 }
 
-dl.weather-report {
-    display: inline-block;
-    margin: 1.9em;
-    padding: 0.5em;
-    background: #1c1946;
-}
 
-dl.weather-report.description-dl.ng-scope {
-  width: 200px;
-  height: 220px;
-  border-radius: 1em 1em 0 0;
-  background: $body-bg;
-  text-align: center;
-  font-size: 18px
+
+.navbar {
+  margin: 0;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -35,14 +44,6 @@ dl.weather-report.description-dl.ng-scope {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
-}
-.jumbotron h1 {
-  font-size: 30px;
-
-}
-
-.jumbotron h2 {
-  font-size: 22px;
 }
 
 /* Custom page header */
@@ -58,15 +59,7 @@ dl.weather-report.description-dl.ng-scope {
     padding-bottom: 19px;
   }
 }
-dl.weather-report {
-  display: inline-block;
-  margin: 1.5em;
-  padding: 0.5em;
-  background: $gray-darker;
-}
-.city-saved-alert {
-  padding: 0.5em;
-}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -79,10 +72,10 @@ dl.weather-report {
 }
 
 /* Main marketing message and sign up button */
-.jumbotron, h1{
+.jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-
+  background-color: $jumbotron-color;
   .btn {
     font-size: 21px;
     padding: 14px 24px;
@@ -100,9 +93,9 @@ dl.weather-report {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
+  /*.container {
     max-width: 730px;
-  }
+  }*/
 
   /* Remove the padding we set earlier */
   .header,
@@ -118,26 +111,26 @@ dl.weather-report {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
-    width: 100%;
   }
 }
-/* Views for main content*/
-ul {
-  list-style: none;
-}
-/* Views for forecast
-dl.weather-forecast {
-  background: $btn-primary-color ;
-  display: inline-block;
-  margin: 1.5em;
-  text-align: center;
-  padding: 0.75em;
-  border-radius: $list-group-border-radius;
 
+.jumbotron {
+  background-color: $jumbotron-color;
+  color: $text-color;
 }
-*/
+
+.jumbotron p input{
+  color: black;
+}
+
 /**** current view ****/
-
+.current-container {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 75%;
+}
 
 .calendar-container {
   position: relative;
@@ -166,7 +159,7 @@ dl.weather-forecast {
   font-weight: 400;
 }
 .day {
-  font-size: 4em;
+  font-size: 8em;
   font-weight: 900;
   line-height: 1em;
 }
@@ -187,15 +180,6 @@ dl.weather-forecast {
 .forecast-icon {
   font-size: 4em;
   padding: 15px;
-}
-.wi {
-    display: inline-block;
-    font-family: weathericons;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    //-webkit-font-smoothing: antialiased;
-    //-moz-osx-font-smoothing: grayscale;
 }
 
 .current-description {
@@ -276,10 +260,11 @@ dl.weather-forecast {
 
 dl.weather-report.description-dl.ng-scope {
   width: 200px;
-  height: 550px;
+  height: 444px;
   border-radius: 1em 1em 0 0;
   background: $body-bg;
   text-align: center;
+  padding: 0em;
 }
 
 .saved-cities-list {
@@ -290,7 +275,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: $body-bg;
+  background-color: #145F82;
 }
 
 li {
@@ -299,7 +284,7 @@ li {
 
 li a {
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 16px;
     text-decoration: none;
@@ -314,7 +299,40 @@ h2 {
   line-height: 1em;
 }
 .btn-primary {
-    color: #6a6a6b;
+    color: #333;
     background-color: #c3bdbd;
     border-color: #b7b0b0;
+  }
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 591px) {
+  dl.weather-report.description-dl.ng-scope {
+    width: 90%;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 592px) and (max-width : 768px) {
+  dl.weather-report.description-dl.ng-scope {
+    width: 45%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  dl.weather-report.description-dl.ng-scope {
+
+  }
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
 }
