@@ -1,12 +1,13 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 @import "variables"; // Override default Bootstrap values.
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import 'bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
 // endbower
 //@import "icon-classes/classes-day.scss";
 @import "content";
 @import "buttons";
 @import "transitions";
+//@import 'weather-icons.scss';
 //animations: animate.css
 /*.browsehappy {
   margin: 0.2em 0;

@@ -21,12 +21,18 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
+
 }
 
 body {
   padding: 0;
   font: 'Lato', sans-serif;
-  background-color: $body-bg;
+  //@include gradient-vertical-three-colors(#00b3ee, #022136);
+background-color: #072137;
+
+}
+body.ng-scope{
+  background-color: #072137;
 }
 
 dt, dd {
@@ -76,6 +82,8 @@ dt, dd {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   background-color: $jumbotron-color;
+  //@include gradient-vertical-three-colors(#00b3ee, #022136);
+
   .btn {
     font-size: 21px;
     padding: 14px 24px;
@@ -115,7 +123,7 @@ dt, dd {
 }
 
 .jumbotron {
-  background-color: $jumbotron-color;
+  background-color: #072137;
   color: $text-color;
 }
 
@@ -139,7 +147,7 @@ dt, dd {
 
 .calendar-container .city-info {
   border-radius: 1em 1em 0 0;
-  background: $body-bg;
+  @include gradient-vertical-three-colors(#00b3ee, #022136);
   color: #fff;
   padding: 3em 2em;
 }
@@ -199,7 +207,7 @@ dt, dd {
 
 .forecast-container .forecast-info {
   border-radius: 1em 1em 0 0;
-  background: $body-bg;
+  @include gradient-vertical-three-colors(#00b3ee, #022136);
   color: #fff;
   padding: 3em 2em;
 }
@@ -262,7 +270,7 @@ dl.weather-report.description-dl.ng-scope {
   width: 200px;
   height: 444px;
   border-radius: 1em 1em 0 0;
-  background: $body-bg;
+  @include gradient-vertical-three-colors(#00b3ee, #022136);
   text-align: center;
   padding: 0em;
 }
@@ -275,7 +283,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #145F82;
+  background-color: #072137;
 }
 
 li {
