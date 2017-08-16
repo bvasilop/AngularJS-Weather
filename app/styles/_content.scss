@@ -187,7 +187,22 @@ dt, dd {
 
 .forecast-icon {
   font-size: 4em;
-  padding: 15px;
+    image-rendering: crisp-edges;
+//  padding: 15px;
+}
+img {
+  //ms-interpolation-mode: nearest-neighbor;
+      //image-rendering: -webkit-optimize-contrast;
+    //  image-rendering: -moz-crisp-edges;
+      //image-rendering: pixelated;
+      //  image-rendering: crisp-edges;
+    //  z-index: -1;
+
+  //opacity: 0;
+  //overflow: hidden;
+  -webkit-filter: contrast(1.25);
+  filter: contrast(3.25);
+  //mix-blend-mode: hard-light;
 }
 
 .current-description {

@@ -8,7 +8,8 @@
       <div class="date">{{weather.dt*1000 | date: 'EEE'}}</div>
       <div class="day">{{weather.dt*1000 | date:'dd'}}</div>
       <div class="month">{{weather.dt*1000 | date:'MMM'}}</div>
-      <div class="forecast-icon"><i class="wi wi-owm-day-{{weather.weather[0].id}}"></i></div>
+      <div class="forecast-icon"><img ng-src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" alt="icon" style="width:120px;height:120px;"></div>
+      <!--<dt>Wind</dt>-->
       <!--<div class="forecast-icon"> <img ng-src='http://openweathermap.org/img/w/{{prediction.weather[0].icon}}.png' style="width:80px;"></div>-->
       <!--<div class="forecast-icon"><img ng-src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon"        style="width:100px;height:100px;"></div>-->
       <!--<p><img ng-src="{{getIcon(prediction.weather[0].main)}}"></img></p>-->
@@ -16,7 +17,7 @@
       <div class="min">{{weather.temp.min}} &deg;F</div>
       <div class="forecast-description">{{weather.weather[0].main}}</div>
       <div class="forecast-description">{{weather.weather[0].description}}</div>
-      <div class="humidity">{{forecast.humidity.unit }}</div>
+      <!--<div class="humidity">{{forecast.humidity.unit }}</div>-->
     </div>
   </dl>
   <div class="arrow"><a ng-href="#!/{{cityID}}" style="display: block; z-index: 1"><object data="images/right-chevron.svg" alt="chevron icon" type="image/svg+xml" style="z-index: -1; pointer-events: none;"></object></a> </div>
