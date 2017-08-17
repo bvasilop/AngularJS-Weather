@@ -184,7 +184,7 @@ dt, dd {
   font-weight: 400;
 }
 .day {
-  font-size: 8em;
+  font-size: 13vh;
   font-weight: 900;
   line-height: 1em;
 }
@@ -233,7 +233,7 @@ img {
 .description-dl {
   display: inline-block;
   vertical-align: top;
-  margin: 1em;
+  margin: .75em;
   height: 100px;
 }
 
@@ -272,7 +272,7 @@ img {
 
 .forecast-description {
   font-size: 1.5em;
-  line-height: 1em;
+  line-height: .25em;
 }
 /*.weather-report {
   border-radius: 1em;
@@ -293,17 +293,17 @@ img {
   padding: 3em 2em;
 }
 
-.arrow {
+/*.arrow {
   left: 2%;
   position: relative;
   transform: translate(0px, 250px)
 }
-
+*/
 dl.weather-report.description-dl.ng-scope {
   //width: 100px;
   //height: 440px;
-  width: 21vh;
-  height: 54vh;
+  //width: 25vh;
+  //height: 61vh;
   border-radius: 1em 1em 0 0;
   background-image: linear-gradient(#00b3ee, #022136 50%, #ff0000);
   //@include gradient-vertical-three-colors(#00b3ee, #022136);//#ff0000
@@ -319,7 +319,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #072137;
+  //background-color: #072137;
 }
 
 li {
@@ -350,36 +350,44 @@ h2 {
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-
+  dl.weather-report.description-dl.ng-scope {
+  height: 50vh;
+  width :22vh
+  }
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 591px) {
-  //dl.weather-report.description-dl.ng-scope {
-  .current-dl {
-    width: 10vh;
-   height: 20vh;
-
+  dl.weather-report.description-dl.ng-scope {
+  height: 50vh;
+  width: 20vh;
   }
+
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 592px) and (max-width : 768px) {
+
   dl.weather-report.description-dl.ng-scope {
-    //width: 45%;
-  }
+  height: 50vh;
+  width: 20vh;
+}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   dl.weather-report.description-dl.ng-scope {
-
+  height: 50vh;
+  width: 20vh;
   }
 
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-
+  dl.weather-report.description-dl.ng-scope {
+  height: 47vh;
+  width: 20vh;
+  }
 }

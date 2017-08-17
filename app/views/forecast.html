@@ -14,18 +14,20 @@
       <!--<div class="forecast-icon"> <img ng-src='http://openweathermap.org/img/w/{{prediction.weather[0].icon}}.png' style="width:80px;"></div>-->
       <!--<div class="forecast-icon"><img ng-src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon"        style="width:100px;height:100px;"></div>-->
       <!--<p><img ng-src="{{getIcon(prediction.weather[0].main)}}"></img></p>-->
-      <div class="max">{{weather.temp.max}} &deg;F</div>
-      <div class="min">{{weather.temp.min}} &deg;F</div>
+
+      <div class="max">{{weather.temp.max}} &deg;F </div>
+
+      <div class="min">{{weather.temp.min}} &deg;F </div>
       <!--<div class="forecast-description">{{weather.weather[0].main}}</div>-->
       <div class="forecast-description">{{weather.weather[0].description}}</div>
-      <!--<div class="humidity">{{forecast.humidity.unit }}</div>-->
+      <!--<div class="humidity">{{weather.humidity.unit}}</div>-->
     </div>
   </dl>
   <!--<p><a ng-href="#!/current/{{cityID}}" class="btn btn-lg btn-primary">View Current Weather</a></p>-->
    <p><a ng-href="#!/" class="btn btn-lg btn-primary">Select New City</a>
-  <div class="arrow"><a ng-href="#!/{{cityID}}" style="display: block; z-index: 1"><object data="images/right-chevron.svg" alt="chevron icon" type="image/svg+xml" style="z-index: -1; pointer-events: none;"></object></a> </div>
-</div></p>
-</div>
+  <!--<div class="arrow"><a ng-href="#!/{{cityID}}" style="display: block; z-index: 1"><object data="images/right-chevron.svg" alt="chevron icon" type="image/svg+xml" style="z-index: -1; pointer-events: none;"></object></a> </div>-->
+</p>
+
 
 <!--<img ng-src=
 
