@@ -351,16 +351,17 @@ h2 {
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 50vh;
+  height: 55vh;
   width :22vh
   }
 
 }
 
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 591px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 50vh;
+  height: 55vh;
   width: 20vh;
   }
 
@@ -370,7 +371,7 @@ h2 {
 @media only screen and (min-width: 592px) and (max-width : 768px) {
 
   dl.weather-report.description-dl.ng-scope {
-  height: 50vh;
+  height: 49vh;
   width: 20vh;
 }
 }
@@ -378,7 +379,7 @@ h2 {
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 50vh;
+  height: 49vh;
   width: 20vh;
   }
 
