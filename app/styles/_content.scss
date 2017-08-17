@@ -26,11 +26,12 @@ body {
 
 body {
   padding: 0;
-  font: 'Lato', sans-serif;
+  font: 'Montserrat', 'Lato', sans-serif;
   //@include gradient-vertical-three-colors(#00b3ee, #022136);
 background-color: #072137;
 
 }
+
 body.ng-scope{
   background-color: #072137;
 }
@@ -84,11 +85,26 @@ dt, dd {
   background-color: $jumbotron-color;
   //@include gradient-vertical-three-colors(#00b3ee, #022136);
 
-  .btn {
+  /*.btn {
     font-size: 21px;
     padding: 14px 24px;
-  }
+
+  }*/
 }
+/*.jumbotron .btn {
+    background: #abf0ff;
+    color: #000;
+    border: 2px solid #333;
+    border-radius: .25em;
+    font-size: 18px;
+    padding: 8px 8px;
+    display: inline-block;
+}
+*/
+
+
+
+
 
 /* Supporting marketing content */
 .marketing {
@@ -145,13 +161,13 @@ dt, dd {
   width: 450px;
 }
 
-.calendar-container .city-info {
+/*.calendar-container .city-info {
   border-radius: 1em 1em 0 0;
   @include gradient-vertical-three-colors(#00b3ee, #022136);
   color: #fff;
   padding: 3em 2em;
 }
-
+*/
 .current-dl {
   height: 25px;
 }
@@ -192,11 +208,11 @@ dt, dd {
 }
 img {
   //ms-interpolation-mode: nearest-neighbor;
-      //image-rendering: -webkit-optimize-contrast;
+      image-rendering: -webkit-optimize-contrast;
     //  image-rendering: -moz-crisp-edges;
       //image-rendering: pixelated;
-      //  image-rendering: crisp-edges;
-    //  z-index: -1;
+        image-rendering: crisp-edges;
+      z-index: 1;
 
   //opacity: 0;
   //overflow: hidden;
@@ -225,6 +241,7 @@ img {
   @include gradient-vertical-three-colors(#00b3ee, #022136);
   color: #fff;
   padding: 3em 2em;
+
 }
 
 /*.forecast-dt{
@@ -282,10 +299,13 @@ img {
 }
 
 dl.weather-report.description-dl.ng-scope {
-  width: 200px;
-  height: 444px;
+  //width: 100px;
+  //height: 440px;
+  width: 21vh;
+  height: 54vh;
   border-radius: 1em 1em 0 0;
-  @include gradient-vertical-three-colors(#00b3ee, #022136);
+  background-image: linear-gradient(#00b3ee, #022136 50%, #ff0000);
+  //@include gradient-vertical-three-colors(#00b3ee, #022136);//#ff0000
   text-align: center;
   padding: 0em;
 }
@@ -321,10 +341,10 @@ h2 {
   font-size: 1.5em;
   line-height: 1em;
 }
-.btn-primary {
-    color: #333;
-    background-color: #c3bdbd;
-    border-color: #b7b0b0;
+
+
+.bg-warning {
+    background-color: #6eeffd;
   }
 
 /* Custom, iPhone Retina */
@@ -335,15 +355,18 @@ h2 {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 591px) {
-  dl.weather-report.description-dl.ng-scope {
-    width: 90%;
+  //dl.weather-report.description-dl.ng-scope {
+  .current-dl {
+    width: 10vh;
+   height: 20vh;
+
   }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 592px) and (max-width : 768px) {
   dl.weather-report.description-dl.ng-scope {
-    width: 45%;
+    //width: 45%;
   }
 }
 

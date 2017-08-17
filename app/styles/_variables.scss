@@ -154,8 +154,9 @@ $btn-default-color:              #333 !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
-$btn-primary:                     #c3bdbd;
-$btn-primary-color:              #c3bdbd!default;
+$btn-primary:                     #c3bdbd !default;
+$btn-primary-color:              #00b3ee !default;
+//$btn-primary-color-hover:     #ff0000 !default;
 $btn-primary-bg:                 #c3bdbd !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
@@ -872,3 +873,10 @@ $page-header-border-color:    $gray-lighter !default;
 $dl-horizontal-offset:        $component-offset-horizontal !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
+
+//@mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+
+$start-color:                 #00b3ee !default;
+$mid-color:                  #022136 !default;
+$color-stop:                 50% !default;
+$end-color:                #ff0000 !default;
