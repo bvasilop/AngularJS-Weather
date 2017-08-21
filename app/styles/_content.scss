@@ -82,15 +82,7 @@ dt, dd {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  background-color: $jumbotron-color;
-  //@include gradient-vertical-three-colors(#00b3ee, #022136);
-
-  /*.btn {
-    font-size: 21px;
-    padding: 14px 24px;
-
-  }*/
+  border-bottom: 0;
 }
 /*.jumbotron .btn {
     background: #abf0ff;
@@ -140,8 +132,14 @@ dt, dd {
 }
 
 .jumbotron {
+  text-align: center;
   background-color: #072137;
   color: $text-color;
+  border-bottom: 0;/* Remove the bottom border on the jumbotron for visual effect */
+}
+
+.container {
+  border-bottom: 0;/* Remove the bottom border on the jumbotron for visual effect */
 }
 
 .jumbotron p input{
@@ -155,6 +153,7 @@ dt, dd {
   top: 50%;
   transform: translate(-50%, -50%);
   height: 75%;
+  border-bottom: 0;
 }
 
 .calendar-container {
@@ -199,11 +198,11 @@ dt, dd {
   float:right;
   clear: both;
   margin-top: -130px;
-  font-size: 6em;
+  //font-size: 7em;
 }
 
 .forecast-icon {
-  font-size: 4em;
+  font-size: 1em;
     image-rendering: crisp-edges;
 //  padding: 15px;
 }
@@ -233,8 +232,8 @@ img {
 .description-dl {
   display: inline-block;
   vertical-align: top;
-  margin: .75em;
-  height: 100px;
+  margin: 1.5em;
+  //height: 100px;
 }
 
 .forecast-container .forecast-info {
@@ -244,35 +243,22 @@ img {
   padding: 3em 2em;
 
 }
-
-/*.forecast-dt{
-  font-weight:bold;
-  font-size:1.5em;
-  margin-bottom:0.7em;
-}
-.forecast-dd{
-  color:#444;
-  font-size:1em;
-  margin:0 0 2em 0;
-  line-height:1.5em;
-  text-transform: lowercase;
-}*/
-
 .max {
   font-size: 2em;
-  line-height: 1em;
+  line-height: 1.5em;
   font-weight: 500;
 }
 
 .min {
   font-size: 1.5em;
-  line-height: 1em;
-  margin-bottom: 1em;
+  line-height: 1.5em;
+  margin-bottom: 0.25em;
 }
 
 .forecast-description {
   font-size: 1.5em;
-  line-height: .25em;
+  line-height: 1em;
+  font-weight: bold;
 }
 /*.weather-report {
   border-radius: 1em;
