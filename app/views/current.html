@@ -21,9 +21,13 @@
     <dd>{{currentWeather.main.temp}} &deg;F</dd>
     <dd><img src="http://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png" alt="icon" style="width:120px;height:120px;"></dd>
     <dt>Wind</dt>
-    <dd>{{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}} &deg;</dd>
+    <dd>{{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}}&deg;</dd>
     <dt>Cloud cover</dt>
     <dd>{{currentWeather.clouds.all}}%</dd>
+    <dt>Humidity</dt>
+    <dd>{{currentWeather.main.humidity}}%</dd>
+    <dt>Atmospheric Pressure</dt>
+    <dd>{{currentWeather.main.pressure}} hPa</dd>
 </dl>
 
 <p><a ng-href="#!/5-day-forecast/{{cityID}}" class="btn btn-lg btn-primary">View 5-day Forecast</a></p>

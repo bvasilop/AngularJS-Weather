@@ -4,7 +4,6 @@ div[ng-view].ng-enter {
     animation: fadeInDown 3.5s;
 }
 /*div[ng-view].ng-leave {
-    -webkit-animation: fadeInDown 0.5s;
-    animation: fadeInDown 0.5s;
-}
-*/
+    -webkit-animation: tada 0.5s;
+    animation: tada 0.5s;
+}*/
