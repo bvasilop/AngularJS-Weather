@@ -84,17 +84,6 @@ dt, dd {
   text-align: center;
   border-bottom: 0;
 }
-/*.jumbotron .btn {
-    background: #abf0ff;
-    color: #000;
-    border: 2px solid #333;
-    border-radius: .25em;
-    font-size: 18px;
-    padding: 8px 8px;
-    display: inline-block;
-}
-*/
-
 
 
 
@@ -313,15 +302,18 @@ li {
 }
 
 li a {
+    font-weight:bold;
     display: block;
-    color: white;
+    color: #ffd391;
     text-align: center;
     padding: 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #fff;
+    transition: all .75s;
+    color: #72ffb8;
+
 }
 
 h2 {
@@ -338,7 +330,7 @@ h2 {
 @media only screen and (min-width : 320px) {
   dl.weather-report.description-dl.ng-scope {
   height: 59vh;
-  width :20vh;
+  width :20%;
   }
 
 }
@@ -348,7 +340,7 @@ h2 {
 @media only screen and (max-width : 591px) {
   dl.weather-report.description-dl.ng-scope {
   height: 58vh;
-  width: 20vh;
+  width: 32%;
   }
 
 }
@@ -357,16 +349,16 @@ h2 {
 @media only screen and (min-width: 592px) and (max-width : 768px) {
 
   dl.weather-report.description-dl.ng-scope {
-  height: 48vh;
-  width: 20vh;
+  height: 55vh;
+  width: 32%;
 }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 57vh;
-  width: 37vh;
+  height: 63vh;
+  width: 36%;
   }
 
 }
@@ -374,7 +366,7 @@ h2 {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 47vh;
-  width: 20vh;
+  height: 50vh;
+  width: 15%;
   }
 }
