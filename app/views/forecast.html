@@ -2,8 +2,8 @@
 <div class="jumbotron">
   <h1>{{forecastData.city.name}}, {{forecastData.city.country}}</h1>
 
-  <h1>16-day Forecast</h1>
-  <dl ng-repeat="weather in forecastData.list | limitTo:16:0" class="weather-report description-dl">
+  <h1>15-day Forecast</h1>
+  <dl ng-repeat="weather in forecastData.list | limitTo:15:0" class="weather-report description-dl">
     <div class="forecast-info">
       <div class="date">{{weather.dt*1000 | date: 'EEE'}}</div>
       <div class="day">{{weather.dt*1000 | date:'dd'}}</div>
