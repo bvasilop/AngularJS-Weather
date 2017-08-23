@@ -24,7 +24,7 @@ body {
   padding: 0;
   font-family: 'Tahoma', 'Arial', sans-serif;
   //@include gradient-vertical-three-colors(#00b3ee, #022136);
-  background-color: #072137;
+  //background-color: #072137;
 
 
 }
@@ -34,8 +34,14 @@ body.ng-scope{
 }
 
 dt, dd {
-  font-size: 1.5em;
-  text-shadow: 2.5px 1.5px 0px #022136;
+  font-size: 2em;
+  text-shadow: 1px 1.5px 0px #CB070E;
+}
+
+input::placeholder {
+  text-shadow: 1px 1.0px 0px #CB070E;
+  color: #38599a;
+
 }
 
 
@@ -228,12 +234,19 @@ img {
 }
 
 dl.weather-report.description-dl.ng-scope {
-  border: 2px solid #ffd391;
+  -moz-box-shadow: 0 0 5px 3px #CB070E;
+-webkit-box-shadow: 0 0 5px 3px #CB070E;
+  border: 2.5px solid #ffd391;
   border-radius: 1em 1em 0 0;
   background-image: linear-gradient(#00b3ee, #022136 50%, #ff0000);
   text-align: center;
   text-shadow: 2.5px 1.5px 0px #022136;
 
+
+}
+dl.weather-report.description-dl.ng-scope.box-shadow {
+    -webkit-box-shadow: 2px 2px 4px 1px #fff;
+    box-shadow: 2px 2px 4px 1px #fff;
 }
 
 .saved-cities-list {
@@ -275,19 +288,29 @@ h2 {
 h1 {
 
   text-shadow: 1px 1.5px 0px #CB070E;//#7F1D8A
-
-
-
+  font-size: 2.75em;
+  font-weight: bold;
+  line-height: 1.25em;
+}
+label {
+  text-shadow: 1px 1.5px 0px #CB070E;
+  font-size: 1.5em;
 }
 
 input {
-  color: #022136 ;
+  -moz-box-shadow: 0 0 5px 1px #00b3ee;
+-webkit-box-shadow: 0 0 5px 1px #00b3ee;
+height: 1.75em;
+  color: #022136;
+  border-radius: .35em;
+  border-color: #00b3ee;
   background-color: #ffd391;
   text-shadow: 1px 1px 0px #CB070E;
 }
 .bg-warning {
     background-color: #6eeffd;
   }
+
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
