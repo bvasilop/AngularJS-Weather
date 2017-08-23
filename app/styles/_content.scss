@@ -330,7 +330,7 @@ h2 {
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 59vh;
+  height: auto;
   width :22%;
   padding: 1rem;
 }
@@ -349,8 +349,8 @@ h2 {
     margin-top: 1em;
     font-size: 1.8em;
     line-height: 1em;
-    margin-bottom: 1em;
-    font-weight: normal;
+    margin-bottom: 0em;
+    font-weight: bold;
   }
 
 }
@@ -379,16 +379,16 @@ h2 {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 44rem;
+  height: 43rem;
   width: 15%;
   padding: 1em 1em 2em 1em;
 
 
   }
   .forecast-description {
-    margin-top: 1em;
+    margin-top: 0.5em;
     font-size: 1.5em;
-    line-height: 1em;
+    line-height: 1.10em;
     margin-bottom: 1em;
     //font-weight: bold;
   }

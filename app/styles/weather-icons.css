@@ -1,4 +1,4 @@
-/*!
+/*
  *  Weather Icons 2.0.8
  *  Updated September 19, 2015
  *  Weather themed icons for Bootstrap
@@ -19,7 +19,7 @@
  *  - Inspired by and works great as a companion with Font Awesome
  *    "Font Awesome by Dave Gandy - http://fontawesome.io"
  */
-@font-face {
+/*@font-face {
   font-family: 'weathericons';
   src: url('../font/weathericons-regular-webfont.eot');
   src: url('../font/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../font/weathericons-regular-webfont.woff2') format('woff2'), url('../font/weathericons-regular-webfont.woff') format('woff'), url('../font/weathericons-regular-webfont.ttf') format('truetype'), url('../font/weathericons-regular-webfont.svg#weather_iconsregular') format('svg');
@@ -1836,3 +1836,4 @@
 .wi-wu-unknown:before {
   content: "\f00d";
 }
+*/
