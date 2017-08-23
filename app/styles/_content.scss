@@ -341,7 +341,7 @@ input {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 43rem;
+  height: 44.5rem;
   width: 15%;
   padding: 1em 1em 2em 1em;
 
@@ -351,7 +351,7 @@ input {
     margin-top: 0.5em;
     font-size: 1.5em;
     line-height: 1.10em;
-    margin-bottom: 1em;
+    margin-bottom: 0em;
     //font-weight: bold;
   }
 }
