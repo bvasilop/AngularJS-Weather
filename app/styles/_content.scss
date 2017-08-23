@@ -5,10 +5,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "transitions";
 
-
-//$background-color: #e66b6b;
-//$text-color: #fff;
-
 .browsehappy {
 
   background: #ccc;
@@ -39,6 +35,7 @@ body.ng-scope{
 
 dt, dd {
   font-size: 1.5em;
+  text-shadow: 2.5px 1.5px 0px #022136;
 }
 
 
@@ -97,12 +94,6 @@ dt, dd {
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /*.container {
-    max-width: 730px;
-  }*/
-
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -118,7 +109,7 @@ dt, dd {
   .jumbotron {
     border-bottom: 0;
   }
-}
+
 
 .jumbotron {
   text-align: center;
@@ -131,10 +122,10 @@ dt, dd {
   border-bottom: 0;/* Remove the bottom border on the jumbotron for visual effect */
 }
 
-.jumbotron p input{
+/*.jumbotron p input{
   color: black;
 }
-
+*/
 /**** current view ****/
 .current-container {
   left: 50%;
@@ -150,13 +141,6 @@ dt, dd {
   width: 450px;
 }
 
-/*.calendar-container .city-info {
-  border-radius: 1em 1em 0 0;
-  @include gradient-vertical-three-colors(#00b3ee, #022136);
-  color: #fff;
-  padding: 3em 2em;
-}
-*/
 .current-dl {
   height: 25px;
 }
@@ -187,42 +171,29 @@ dt, dd {
   float:right;
   clear: both;
   margin-top: -130px;
-  //font-size: 7em;
+
 }
 
 .forecast-icon {
   font-size: 1em;
     image-rendering: crisp-edges;
-//  padding: 15px;
+
 }
 img {
-  //ms-interpolation-mode: nearest-neighbor;
       image-rendering: -webkit-optimize-contrast;
     //  image-rendering: -moz-crisp-edges;
-      //image-rendering: pixelated;
         image-rendering: crisp-edges;
       z-index: 1;
-
-  //opacity: 0;
-  //overflow: hidden;
-  -webkit-filter: contrast(1.25);
-  filter: contrast(3.25);
-  //mix-blend-mode: hard-light;
+      -webkit-filter: contrast(1.25);
+      filter: contrast(3.25);
 }
 
-/*.current-description {
-  border: 1px solid $body-bg;
-  padding: 15px 30px;
-  padding-bottom: 200px;
-  margin-bottom: 20px;
-}
-*/
 /**** Forecast ****/
 .description-dl {
   display: inline-block;
   vertical-align: top;
   margin: 1.5em;
-  //height: 100px;
+
 }
 
 .forecast-container .forecast-info {
@@ -250,40 +221,18 @@ img {
   line-height: 1em;
   font-weight: bold;
 }
-/*.weather-report {
-  border-radius: 1em;
-  background: #e66b6b;
-  color: #fff;
-  padding: 3em 2em;
-  width: 100%;
-}*/
-
 .forecast-container {
   position: relative;
   width: 100%;
   text-align: center;
 }
 
-/*forecast-container .city-info {
-  color: #fff;
-  padding: 3em 2em;
-}
-*/
-/*.arrow {
-  left: 2%;
-  position: relative;
-  transform: translate(0px, 250px)
-}
-*/
 dl.weather-report.description-dl.ng-scope {
-  //width: 100px;
-  //height: 440px;
-  //width: 25vh;
-  //height: 58vh;
+  border: 2px solid #b7b0b0;
   border-radius: 1em 1em 0 0;
   background-image: linear-gradient(#00b3ee, #022136 50%, #ff0000);
-  //@include gradient-vertical-three-colors(#00b3ee, #022136);//#ff0000
   text-align: center;
+  text-shadow: 2.5px 1.5px 0px #022136;
 
 }
 
@@ -295,7 +244,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  //background-color: #072137;
+
 }
 
 li {
@@ -309,6 +258,7 @@ li a {
     text-align: center;
     padding: 16px;
     text-decoration: none;
+    text-shadow: .5px 1px 0px #022136;
 }
 
 li a:hover {
@@ -320,9 +270,21 @@ li a:hover {
 h2 {
   font-size: 1.5em;
   line-height: 1em;
+  text-shadow: .5px 1.5px 0px #CB070E;
+}
+h1 {
+
+  text-shadow: 1px 1.5px 0px #CB070E;//#7F1D8A
+
+
+
 }
 
-
+input {
+  color: #022136 ;
+  background-color: #ffd391;
+  text-shadow: 1px 1px 0px #CB070E;
+}
 .bg-warning {
     background-color: #6eeffd;
   }
