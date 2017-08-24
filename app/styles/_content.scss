@@ -23,29 +23,20 @@ body {
 body {
   padding: 0;
   font-family: 'Tahoma', 'Arial', sans-serif;
-  //@include gradient-vertical-three-colors(#00b3ee, #022136);
-  //background-color: #072137;
-
-
 }
-
 body.ng-scope{
   background-color: #072137;
 }
-
-dt, dd {
+dt {
+  color: #fff2bf;
   font-size: 2em;
   text-shadow: 1px 1.5px 0px #CB070E;
 }
-
-input::placeholder {
-  text-shadow: 1px 1.0px 0px #CB070E;
-  color: #38599a;
-
+dd {
+  font-size: 2em;
+  color: rgb(144, 255, 247);
+  text-shadow: 2px 3px 0px #000000;
 }
-
-
-
 .navbar {
   margin: 0;
 }
@@ -56,7 +47,6 @@ input::placeholder {
   padding-left: 15px;
   padding-right: 15px;
 }
-
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
@@ -77,7 +67,6 @@ input::placeholder {
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
-
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -87,20 +76,14 @@ input::placeholder {
   text-align: center;
   border-bottom: 0;
 }
-
-
-
-
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
-
   p + h4 {
     margin-top: 28px;
   }
 }
-
-  /* Remove the padding we set earlier */
+/* Remove the padding we set earlier */
   .header,
   .marketing,
   .footer {
@@ -115,47 +98,63 @@ input::placeholder {
   .jumbotron {
     border-bottom: 0;
   }
-
-
+/*contents within jumbotron after reset*/
 .jumbotron {
   text-align: center;
   background-color: #072137;
-  color: $text-color;
+  color: #fcf5eb;//rgb(198, 229, 255);
   border-bottom: 0;/* Remove the bottom border on the jumbotron for visual effect */
 }
-
 .container {
   border-bottom: 0;/* Remove the bottom border on the jumbotron for visual effect */
 }
-
-/*.jumbotron p input{
-  color: black;
+h2 {
+  color: rgb(198, 229, 255);
+  font-size: 1.5em;
+  line-height: 1em;
+  text-shadow: .5px 1.5px 0px #CB070E;
 }
-*/
+h1 {
+  text-shadow: 2px 1.5px 0px #CB070E;//#7F1D8A
+  font-size: 2.75em;
+  font-weight: bold;
+  line-height: 1.25em;
+}
+label {
+  text-shadow: 1px 1.5px 0px #CB070E;
+  font-size: 1.5em;
+  color: #ffd391;
+}
+input {
+  height: 1.75em;
+  color: #022136;
+  border-radius: .35em;
+  border-color: #38599a;
+  background-color: #ffd391;
+  text-shadow: 1px 1px 0px #CB070E;
+}
+input::placeholder {
+  text-shadow: 1px 1.0px 0px #CB070E;
+  color: #38599a;
+}
+.rest{
+    -moz-box-shadow: 0 0 5px 4px #38599a;
+  -webkit-box-shadow: 0 0 5px 4px #38599a;
+  border-radius: 15px;
+  padding-left: 8px;
+}
+.rest:focus {
+  outline: none;
+  box-shadow: 0px 0px 2px blue;
+}
+.bg-warning {
+    background-color: #6eeffd;
+  }
 /**** current view ****/
-.current-container {
-  left: 50%;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 75%;
-  border-bottom: 0;
-}
-
-.calendar-container {
-  position: relative;
-  width: 450px;
-}
-
-.current-dl {
-  height: 25px;
-}
-
 .city {
   font-size: 4em;
   line-height: 1em;
 }
-
 .date {
   font-size: 3em;
   line-height: 1em;
@@ -166,30 +165,25 @@ input::placeholder {
   font-weight: 900;
   line-height: 1em;
 }
-
 .month {
   font-size: 4em;
   line-height: 1em;
   text-transform: lowercase;
 }
-
 .icon {
   float:right;
   clear: both;
   margin-top: -130px;
-
 }
-
 .forecast-icon {
   font-size: 1em;
     image-rendering: crisp-edges;
-
 }
 img {
       image-rendering: -webkit-optimize-contrast;
-    //  image-rendering: -moz-crisp-edges;
-        image-rendering: crisp-edges;
-      z-index: 1;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+      z-index: 5;
       -webkit-filter: contrast(1.25);
       filter: contrast(3.25);
 }
@@ -199,28 +193,23 @@ img {
   display: inline-block;
   vertical-align: top;
   margin: 1.5em;
-
 }
-
 .forecast-container .forecast-info {
   border-radius: 1em 1em 0 0;
   @include gradient-vertical-three-colors(#00b3ee, #022136);
   color: #fff;
   padding: 3em 2em;
-
 }
 .max {
   font-size: 2em;
   line-height: 1.5em;
   font-weight: bold;
 }
-
 .min {
   font-size: 1.7em;
   line-height: 1em;
   margin-bottom: 0.25em;
 }
-
 .forecast-description {
   margin-top: 1em;
   font-size: 1.5em;
@@ -232,23 +221,21 @@ img {
   width: 100%;
   text-align: center;
 }
-
+/* individual weather div's in 5 and 15 day forecast*/
 dl.weather-report.description-dl.ng-scope {
-  -moz-box-shadow: 0 0 5px 2px #CB070E;
--webkit-box-shadow: 0 0 5px 2px #CB070E;
+  -moz-box-shadow: 0 0 3px 1.5px #CB070E;
+-webkit-box-shadow: 0 0 3px 1.5px #CB070E;
   border: 2.5px solid #ffd391;
   border-radius: 1em 1em 0 0;
   background-image: linear-gradient(#00b3ee, #022136 50%, #ff0000);
   text-align: center;
   text-shadow: 2.5px 1.5px 0px #022136;
-
-
 }
+/* forecast weather div's*/
 dl.weather-report.description-dl.ng-scope.box-shadow {
     -webkit-box-shadow: 2px 2px 4px 1px #fff;
     box-shadow: 2px 2px 4px 1px #fff;
 }
-
 .saved-cities-list {
   margin-bottom: 1em;
 }
@@ -257,13 +244,10 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-
 }
-
 li {
     float: left;
 }
-
 li a {
     font-weight:bold;
     display: block;
@@ -271,47 +255,12 @@ li a {
     text-align: center;
     padding: 16px;
     text-decoration: none;
-    text-shadow: .5px 1px 0px #022136;
+    text-shadow: 1px 1.5px 0px #CB070E;
 }
-
 li a:hover {
     transition: all .75s;
     color: #72ffb8;
-
 }
-
-h2 {
-  font-size: 1.5em;
-  line-height: 1em;
-  text-shadow: .5px 1.5px 0px #CB070E;
-}
-h1 {
-
-  text-shadow: 1px 1.5px 0px #CB070E;//#7F1D8A
-  font-size: 2.75em;
-  font-weight: bold;
-  line-height: 1.25em;
-}
-label {
-  text-shadow: 1px 1.5px 0px #CB070E;
-  font-size: 1.5em;
-}
-
-input {
-  -moz-box-shadow: 0 0 5px 1px #00b3ee;
--webkit-box-shadow: 0 0 5px 1px #00b3ee;
-height: 1.75em;
-  color: #022136;
-  border-radius: .35em;
-  border-color: #00b3ee;
-  background-color: #ffd391;
-  text-shadow: 1px 1px 0px #CB070E;
-}
-.bg-warning {
-    background-color: #6eeffd;
-  }
-
-
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
   dl.weather-report.description-dl.ng-scope {
@@ -321,13 +270,11 @@ height: 1.75em;
 }
 }
 
-
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 591px) {
   dl.weather-report.description-dl.ng-scope {
   height: auto;
   width: 32%;
-
   font-size: .5em;
   }
   .forecast-description {
@@ -337,12 +284,10 @@ height: 1.75em;
     margin-bottom: 0em;
     font-weight: bold;
   }
-
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 592px) and (max-width : 768px) {
-
   dl.weather-report.description-dl.ng-scope {
   height: auto;
   width: 32%;
@@ -358,7 +303,6 @@ height: 1.75em;
   padding: 1rem;
   margin-bottom: 1em;
   }
-
 }
 
 /* Large Devices, Wide Screens */
@@ -367,14 +311,12 @@ height: 1.75em;
   height: 44.5rem;
   width: 15%;
   padding: 1em 1em 2em 1em;
-
-
   }
   .forecast-description {
     margin-top: 0.5em;
     font-size: 1.5em;
     line-height: 1.10em;
     margin-bottom: 0em;
-    //font-weight: bold;
+    font-weight: bold;
   }
 }

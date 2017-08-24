@@ -11,6 +11,8 @@
 //
 // Styleguide: buttons.standard
 .jumbotron .btn {
+  -moz-box-shadow: 0 0 2px 1.5px #CB070E;
+-webkit-box-shadow: 0 0 2px 1.5px #CB070E;
   background: #00b3ee;//#00b3ee
   color: #022136;
   border: 2px solid #ffd391;
@@ -38,6 +40,8 @@
 }
 
 .btn-primary {
+  -moz-box-shadow: 0 0 2px 1.5px #CB070E;
+-webkit-box-shadow: 0 0 2px 1.5px #CB070E;
     color: #333;
     background-color: #00b3ee;
     border-color: #ffd391;
