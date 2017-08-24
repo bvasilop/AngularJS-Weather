@@ -116,13 +116,13 @@ h2 {
 }
 .jumbotron h1 {
   text-shadow: 2px 1.5px 0px #CB070E;//#7F1D8A
-  font-size: 3.5em;
+  font-size: 4.25em;
   font-weight: bold;
   line-height: 1.25em;
 }
 label {
   text-shadow: 1px 1.5px 0px #CB070E;
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: #ffd391;
 }
 input {
@@ -272,8 +272,8 @@ li a:hover {
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 591px) {
-  .jumbotron {
-    font-size: .76em;
+  .jumbotron h1{
+    font-size: 2.4em;
   }
   label {
     font-size: 1.1em;
