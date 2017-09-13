@@ -1,49 +1,49 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
-
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/"; // bower:scss
+ @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+ // endbower
 @import "transitions";
 
 .browsehappy {
-
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
 
-html,
-body {
+body,
+html {
   padding: 0;
   margin: 0;
   height: 100%;
-
 }
 
 body {
   padding: 0;
   font-family: 'Tahoma', 'Arial', sans-serif;
 }
-body.ng-scope{
+
+body.ng-scope {
   background-color: #072137;
 }
+
 dt {
   color: #fff2bf;
   font-size: 2em;
-  text-shadow: 1px 1.5px 0px #CB070E;
+  text-shadow: 1px 1.5px 0 #CB070E;
 }
+
 dd {
   font-size: 2em;
   color: rgb(144, 255, 247);
-  text-shadow: 2px 3px 0px #000000;
+  text-shadow: 2px 3px 0 #000000;
 }
+
 .navbar {
   margin: 0;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
+.footer,
 .header,
-.marketing,
-.footer {
+.marketing {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -51,7 +51,6 @@ dd {
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -60,17 +59,16 @@ dd {
     padding-bottom: 19px;
   }
 }
-
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
+
 .container-narrow > hr {
   margin: 30px 0;
 }
-
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
@@ -79,144 +77,161 @@ dd {
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
+
   p + h4 {
     margin-top: 28px;
   }
 }
 /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.footer,
+.header,
+.marketing {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Space out the masthead */
+.header {
+  margin-bottom: 30px;
+}
+/* Remove the bottom border on the jumbotron for visual effect */
+.jumbotron {
+  border-bottom: 0;
+}
 /*contents within jumbotron after reset*/
 .jumbotron {
   text-align: center;
   background-color: #072137;
-  color: #fcf5eb;//rgb(198, 229, 255);
-  border-bottom: 0;/* Remove the bottom border on the jumbotron for visual effect */
+  color: #fcf5eb; //rgb(198, 229, 255);
+  border-bottom: 0;
+  /* Remove the bottom border on the jumbotron for visual effect */
 }
+
 .container {
-  border-bottom: 0;/* Remove the bottom border on the jumbotron for visual effect */
+  border-bottom: 0;
+  /* Remove the bottom border on the jumbotron for visual effect */
 }
+
 h2 {
   color: rgb(198, 229, 255);
   font-size: 1.5em;
   line-height: 1em;
-  text-shadow: .5px 1.5px 0px #CB070E;
+  text-shadow: 0.5px 1.5px 0 #CB070E;
 }
+
 .jumbotron h1 {
-  text-shadow: 2px 1.5px 0px #CB070E;//#7F1D8A
+  text-shadow: 2px 1.5px 0 #CB070E; //#7F1D8A
   font-size: 4.25em;
   font-weight: bold;
   line-height: 1.25em;
 }
+
 label {
-  text-shadow: 1px 1.5px 0px #CB070E;
+  text-shadow: 1px 1.5px 0 #CB070E;
   font-size: 1.5em;
   color: #ffd391;
 }
+
 input {
   height: 1.5em;
   width: 10em;
   color: #022136;
-  border-radius: .35em;
+  border-radius: 0.35em;
   border-color: #38599a;
   background-color: #ffd391;
-  text-shadow: 1px 1px 0px #CB070E;
+  text-shadow: 1px 1px 0 #CB070E;
 }
+
 input::placeholder {
-  text-shadow: 1px 1.0px 0px #CB070E;
+  text-shadow: 1px 1.0px 0 #CB070E;
   color: #38599a;
 }
-.rest{
-    -moz-box-shadow: 0 0 5px 4px #38599a;
+
+.rest {
+  -moz-box-shadow: 0 0 5px 4px #38599a;
   -webkit-box-shadow: 0 0 5px 4px #38599a;
   border-radius: 15px;
   padding-left: 8px;
 }
+
 .rest:focus {
   outline: none;
-  box-shadow: 0px 0px 2px blue;
+  box-shadow: 0 0 2px blue;
 }
+
 .bg-warning {
-    background-color: #6eeffd;
-  }
-/**** current view ****/
+  background-color: #6eeffd;
+}
+/* current view */
 .city {
   font-size: 4em;
   line-height: 1em;
 }
+
 .date {
   font-size: 3em;
   line-height: 1em;
   font-weight: 400;
 }
+
 .day {
   font-size: 7em;
   font-weight: 900;
   line-height: 1em;
 }
+
 .month {
   font-size: 4em;
   line-height: 1em;
   text-transform: lowercase;
 }
+
 .icon {
-  float:right;
+  float: right;
   clear: both;
   margin-top: -130px;
 }
-.forecast-icon {
-  font-size: 1em;
-    image-rendering: crisp-edges;
-}
-img {
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: crisp-edges;
-      z-index: 5;
-      -webkit-filter: contrast(1.25);
-      filter: contrast(3.25);
-}
 
-/**** Forecast ****/
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  z-index: 5;
+  -webkit-filter: contrast(1.25);
+  filter: contrast(3.25);
+}
+/* Forecast */
 .description-dl {
   display: inline-block;
   vertical-align: top;
   margin: 1.5em;
 }
+
 .forecast-container .forecast-info {
   border-radius: 1em 1em 0 0;
   @include gradient-vertical-three-colors(#00b3ee, #022136);
   color: #fff;
   padding: 3em 2em;
 }
+
 .max {
   font-size: 2em;
   line-height: 1.5em;
   font-weight: bold;
 }
+
 .min {
   font-size: 1.7em;
   line-height: 1em;
   margin-bottom: 0.25em;
 }
+
 .forecast-description {
   margin-top: 1em;
   font-size: 1.5em;
   line-height: 1em;
   font-weight: bold;
 }
+
 .forecast-container {
   position: relative;
   width: 100%;
@@ -225,110 +240,118 @@ img {
 /* individual weather div's in 5 and 15 day forecast*/
 dl.weather-report.description-dl.ng-scope {
   -moz-box-shadow: 0 0 3px 1.5px #CB070E;
--webkit-box-shadow: 0 0 3px 1.5px #CB070E;
+  -webkit-box-shadow: 0 0 3px 1.5px #CB070E;
   border: 2.5px solid #ffd391;
   border-radius: 1em 1em 0 0;
   background-image: linear-gradient(#00b3ee, #022136 50%, #ff0000);
   text-align: center;
-  text-shadow: 2.5px 1.5px 0px #022136;
+  text-shadow: 2.5px 1.5px 0 #022136;
 }
 /* forecast weather div's*/
 dl.weather-report.description-dl.ng-scope.box-shadow {
-    -webkit-box-shadow: 2px 2px 4px 1px #fff;
-    box-shadow: 2px 2px 4px 1px #fff;
+  -webkit-box-shadow: 2px 2px 4px 1px #fff;
+  box-shadow: 2px 2px 4px 1px #fff;
 }
+
 .saved-cities-list {
   margin-bottom: 1em;
 }
+
 .city-saved-alert {
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
+
 li {
-    float: left;
+  float: left;
 }
+
 li a {
-    font-weight:bold;
-    display: block;
-    color: #ffd391;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    text-shadow: 1px 1.5px 0px #CB070E;
+  font-weight: bold;
+  display: block;
+  color: #ffd391;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  text-shadow: 1px 1.5px 0 #CB070E;
 }
+
 li a:hover {
-    transition: all .75s;
-    color: #72ffb8;
+  transition: all 0.75s;
+  color: #72ffb8;
 }
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
   dl.weather-report.description-dl.ng-scope {
-  height: auto;
-  width :22%;
-  padding: 1rem;
-}
+    height: auto;
+    width: 22%;
+    padding: 1rem;
+  }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 591px) {
-  .jumbotron h1{
+  .jumbotron h1 {
     font-size: 2.4em;
   }
+
   label {
     font-size: 1.1em;
   }
+
   input {
     width: 6em;
   }
+
   dl.weather-report.description-dl.ng-scope {
-  height: auto;
-  width: 32%;
-  font-size: .5em;
+    height: auto;
+    width: 32%;
+    font-size: 0.5em;
   }
+
   .forecast-description {
     margin-top: 1em;
     font-size: 1.8em;
     line-height: 1em;
-    margin-bottom: 0em;
+    margin-bottom: 0;
     font-weight: bold;
   }
 }
-
 /* Small Devices, Tablets */
 @media only screen and (min-width: 592px) and (max-width : 768px) {
   dl.weather-report.description-dl.ng-scope {
-  height: auto;
-  width: 32%;
-  padding: 1rem;
+    height: auto;
+    width: 32%;
+    padding: 1rem;
+  }
 }
-}
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   dl.weather-report.description-dl.ng-scope {
-  height: auto;
-  width: 33%;
-  padding: 1rem;
-  margin-bottom: 1em;
+    height: auto;
+    width: 33%;
+    padding: 1rem;
+    margin-bottom: 1em;
   }
 }
-
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
   dl.weather-report.description-dl.ng-scope {
-  height: 44.5rem;
-  width: 15%;
-  padding: 1em 1em 2em 1em;
+    height: 44.5rem;
+    width: 15%;
+    padding: 1em 1em 2em;
   }
+
   .forecast-description {
     margin-top: 0.5em;
     font-size: 1.5em;
     line-height: 1.10em;
-    margin-bottom: 0em;
+    margin-bottom: 0;
     font-weight: bold;
   }
 }
