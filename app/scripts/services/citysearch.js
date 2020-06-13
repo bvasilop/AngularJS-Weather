@@ -12,6 +12,7 @@ angular
     // ...
 
     // Public API here
+    'use strict';
     return $resource(
       'https://api.openweathermap.org/data/2.5/find?q=:query&type=like&mode=json&units=imperial&APPID=a1229545e71f4cf85672eee69b3b302e',
       {},
