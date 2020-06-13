@@ -1,6 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/"; // bower:scss
- @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
- // endbower
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
 @import "transitions";
 
 .browsehappy {
@@ -18,7 +18,7 @@ html {
 
 body {
   padding: 0;
-  font-family: 'Tahoma', 'Arial', sans-serif;
+  font-family: "Tahoma", "Arial", sans-serif;
 }
 
 body.ng-scope {
@@ -28,7 +28,7 @@ body.ng-scope {
 dt {
   color: #fff2bf;
   font-size: 2em;
-  text-shadow: 1px 1.5px 0 #CB070E;
+  text-shadow: 1px 1.5px 0 #cb070e;
 }
 
 dd {
@@ -61,18 +61,19 @@ dd {
 }
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  position: absolute;
+  bottom: 0;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
+// .container-narrow > hr {
+//   margin: 30px 0;
+// }
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
   border-bottom: 0;
+  padding: 0 !important;
 }
 /* Supporting marketing content */
 .marketing {
@@ -115,18 +116,18 @@ h2 {
   color: rgb(198, 229, 255);
   font-size: 1.5em;
   line-height: 1em;
-  text-shadow: 0.5px 1.5px 0 #CB070E;
+  text-shadow: 0.5px 1.5px 0 #cb070e;
+  margin: 0.5rem !important;
 }
 
 .jumbotron h1 {
-  text-shadow: 2px 1.5px 0 #CB070E; //#7F1D8A
-  font-size: 4.25em;
+  text-shadow: 2px 1.5px 0 #cb070e; //#7F1D8A
+  font-size: 3.25em;
   font-weight: bold;
-  line-height: 1.25em;
 }
 
 label {
-  text-shadow: 1px 1.5px 0 #CB070E;
+  text-shadow: 1px 1.5px 0 #cb070e;
   font-size: 1.5em;
   color: #ffd391;
 }
@@ -138,11 +139,11 @@ input {
   border-radius: 0.35em;
   border-color: #38599a;
   background-color: #ffd391;
-  text-shadow: 1px 1px 0 #CB070E;
+  text-shadow: 1px 1px 0 #cb070e;
 }
 
 input::placeholder {
-  text-shadow: 1px 1.0px 0 #CB070E;
+  text-shadow: 1px 1px 0 #cb070e;
   color: #38599a;
 }
 
@@ -239,8 +240,8 @@ img {
 }
 /* individual weather div's in 5 and 15 day forecast*/
 dl.weather-report.description-dl.ng-scope {
-  -moz-box-shadow: 0 0 3px 1.5px #CB070E;
-  -webkit-box-shadow: 0 0 3px 1.5px #CB070E;
+  -moz-box-shadow: 0 0 3px 1.5px #cb070e;
+  -webkit-box-shadow: 0 0 3px 1.5px #cb070e;
   border: 2.5px solid #ffd391;
   border-radius: 1em 1em 0 0;
   background-image: linear-gradient(#00b3ee, #022136 50%, #ff0000);
@@ -259,6 +260,9 @@ dl.weather-report.description-dl.ng-scope.box-shadow {
 
 .city-saved-alert {
   border-radius: 0.5em;
+  width: 55vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ul {
@@ -277,9 +281,9 @@ li a {
   display: block;
   color: #ffd391;
   text-align: center;
-  padding: 16px;
+  padding-left: 1rem;
   text-decoration: none;
-  text-shadow: 1px 1.5px 0 #CB070E;
+  text-shadow: 1px 1.5px 0 #cb070e;
 }
 
 li a:hover {
@@ -287,7 +291,7 @@ li a:hover {
   color: #72ffb8;
 }
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width: 320px) {
   dl.weather-report.description-dl.ng-scope {
     height: auto;
     width: 22%;
@@ -295,7 +299,7 @@ li a:hover {
   }
 }
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 591px) {
+@media only screen and (max-width: 591px) {
   .jumbotron h1 {
     font-size: 2.4em;
   }
@@ -323,15 +327,29 @@ li a:hover {
   }
 }
 /* Small Devices, Tablets */
-@media only screen and (min-width: 592px) and (max-width : 768px) {
+@media only screen and (min-width: 300px) and (max-width: 591px) {
+  .city-saved-alert {
+    border-radius: 0.5em;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 592px) and (max-width: 768px) {
   dl.weather-report.description-dl.ng-scope {
     height: auto;
     width: 32%;
     padding: 1rem;
   }
+  .city-saved-alert {
+    border-radius: 0.5em;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width: 992px) {
   dl.weather-report.description-dl.ng-scope {
     height: auto;
     width: 33%;
@@ -340,7 +358,7 @@ li a:hover {
   }
 }
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width: 1200px) {
   dl.weather-report.description-dl.ng-scope {
     height: 44.5rem;
     width: 15%;
@@ -350,7 +368,7 @@ li a:hover {
   .forecast-description {
     margin-top: 0.5em;
     font-size: 1.5em;
-    line-height: 1.10em;
+    line-height: 1.1em;
     margin-bottom: 0;
     font-weight: bold;
   }

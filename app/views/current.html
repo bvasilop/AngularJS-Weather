@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h1>CurrentWeather for {{currentWeather.name}}</h1>
+  <h1>Current Weather for {{currentWeather.name}}</h1>
   <p ng-if="!citySaved">
     <button class="btn btn-sm btn-primary" ng-click="saveCity(currentWeather)">
       Save City
@@ -46,8 +46,6 @@
     <a ng-href="#!/5-day-forecast/{{cityID}}" class="btn btn-lg btn-primary"
       >View 5-day Forecast</a
     >
-  </p>
-  <p>
     <a ng-href="#!/forecast/{{cityID}}" class="btn btn-lg btn-primary"
       >View 15-day Forecast</a
     >
