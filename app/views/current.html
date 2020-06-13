@@ -1,6 +1,10 @@
 <div class="jumbotron">
   <h1>CurrentWeather for {{currentWeather.name}}</h1>
-  <p ng-if="!citySaved"><button class="btn btn-sm btn-primary" ng-click="saveCity(currentWeather)">Save City</button></p>
+  <p ng-if="!citySaved">
+    <button class="btn btn-sm btn-primary" ng-click="saveCity(currentWeather)">
+      Save City
+    </button>
+  </p>
   <div ng-messages="citySaved">
     <p class="city-saved-alert bg-success text-success" ng-message="success">
       {{currentWeather.name}} has been saved to your list of cities.
@@ -19,9 +23,17 @@
     <!--<div class="forecast-icon"<i class="wi wi-owm-day-{{currentWeather.weather[0].id}}"></i></div>-->
     <!--<dd class="forecast-icon"><img src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;"></dd>-->
     <dd>{{currentWeather.main.temp}} &deg;F</dd>
-    <dd><img src="http://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png" alt="icon" style="width:120px;height:120px;"></dd>
+    <dd>
+      <img
+        src="https://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png"
+        alt="icon"
+        style="width: 120px; height: 120px;"
+      />
+    </dd>
     <dt>Wind</dt>
-    <dd>{{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}}&deg;</dd>
+    <dd>
+      {{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}}&deg;
+    </dd>
     <dt>Cloud cover</dt>
     <dd>{{currentWeather.clouds.all}}%</dd>
     <dt>Humidity</dt>
@@ -30,7 +42,15 @@
     <dd>{{currentWeather.main.pressure}} hPa</dd>
   </dl>
 
-  <p><a ng-href="#!/5-day-forecast/{{cityID}}" class="btn btn-lg btn-primary">View 5-day Forecast</a></p>
-  <p><a ng-href="#!/forecast/{{cityID}}" class="btn btn-lg btn-primary">View 15-day Forecast</a></p>
+  <p>
+    <a ng-href="#!/5-day-forecast/{{cityID}}" class="btn btn-lg btn-primary"
+      >View 5-day Forecast</a
+    >
+  </p>
+  <p>
+    <a ng-href="#!/forecast/{{cityID}}" class="btn btn-lg btn-primary"
+      >View 15-day Forecast</a
+    >
+  </p>
   <p><a ng-href="#!/" class="btn btn-lg btn-primary">Select New City</a></p>
 </div>
