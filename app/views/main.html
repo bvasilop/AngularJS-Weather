@@ -7,77 +7,66 @@
           <li ng-repeat="city in storage.savedCities">
             <a ng-href="#!/current/{{city.id}}" class="">{{city.name}}</a>
           </li>
-          <!-- </div> -->
-          <div>
-            <br />
-            <p>
-              <button
-                id="clear-cities-btn"
-                class="btn btn-sm btn-primary"
-                ng-click="removeCity()"
-              >
-                Clear Cities
-              </button>
-            </p>
-          </div>
-          <div ng-app class="jumbotron" ng-controller="MainCtrl">
-            <div class="jumbotron">
-              <h1>Select Your City</h1>
-              <p class="lead"></p>
-              <div ng-init="location=''">
-                <p>
-                  <label for="location"
-                    >Location:
-                    <input
-                      type="text"
-                      name="location"
-                      class="rest"
-                      ng-model="location"
-                      placeholder="Enter city"
-                    />
-                  </label>
-                </p>
-                <p>
-                  <button
-                    id="find-cities-btn"
-                    class="btn btn-lg btn-primary"
-                    ng-click="findCities()"
-                  >
-                    Find City
-                  </button>
-                </p>
-              </div>
-              <div ng-if="searchQuery">
-                <p class="lead">
-                  {{citiesFound.count}} cities found matching the query:
-                  {{searchQuery}}.
-                </p>
-                <dl ng-repeat="city in citiesFound.list">
-                  <dt>{{city.name}}, {{city.sys.country}}</dt>
-                  <dd>
-                    {{city.weather[0].main}} - {{city.weather[0].description}}
-                  </dd>
-                  <dt>Temperature</dt>
-                  <dd>{{city.main.temp}} &deg;F</dd>
-                  <dd>
-                    <img
-                      ng-src="https://openweathermap.org/img/w/{{city.weather[0].icon}}.png"
-                      alt="icon"
-                      style="width: 80px; height: 80px;"
-                    />
-                  </dd>
-                  <dd>
-                    <a
-                      ng-href="#!/current/{{city.id}}"
-                      class="btn btn-lg btn-primary"
-                      >View Current Weather</a
-                    >
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </div>
         </ul>
+      </div>
+      <p>
+        <button
+          id="clear-cities-btn"
+          class="btn btn-sm btn-primary"
+          ng-click="removeCity()"
+        >
+          Clear Cities
+        </button>
+      </p>
+    </div>
+    <div ng-app class="jumbotron" ng-controller="MainCtrl">
+      <div class="jumbotron">
+        <h1>Select Your City</h1>
+        <p class="lead"></p>
+        <div ng-init="location=''">
+          <p>
+            <label for="location"
+              >Location:
+              <input
+                ng-keyup="$event.keyCode == 13 && findCities()"
+                type="text"
+                name="location"
+                class="rest"
+                ng-model="location"
+                placeholder="Enter city"
+              />
+            </label>
+          </p>
+          <p>
+            <button class="btn btn-lg btn-primary" ng-click="findCities()">
+              Find City
+            </button>
+          </p>
+        </div>
+      </div>
+      <div ng-if="searchQuery">
+        <p class="lead">
+          {{citiesFound.count}} cities found matching the query:
+          {{searchQuery}}.
+        </p>
+        <dl ng-repeat="city in citiesFound.list">
+          <dt>{{city.name}}, {{city.sys.country}}</dt>
+          <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
+          <dt>Temperature</dt>
+          <dd>{{city.main.temp}} &deg;F</dd>
+          <dd>
+            <img
+              ng-src="https://openweathermap.org/img/w/{{city.weather[0].icon}}.png"
+              alt="icon"
+              style="width: 80px; height: 80px;"
+            />
+          </dd>
+          <dd>
+            <a ng-href="#!/current/{{city.id}}" class="btn btn-lg btn-primary"
+              >View Current Weather</a
+            >
+          </dd>
+        </dl>
       </div>
     </div>
   </div>
