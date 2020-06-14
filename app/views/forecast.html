@@ -1,40 +1,50 @@
 <div class="jumbotron">
-  <h1>{{forecastData.city.name}}, {{forecastData.city.country}}</h1>
+  <div class="fifteen-day-container">
+    <h1>{{forecastData.city.name}}, {{forecastData.city.country}}</h1>
 
-  <h1>15-day Forecast</h1>
-  <dl
-    ng-repeat="weather in forecastData.list | limitTo:15:0"
-    class="weather-report description-dl"
-  >
-    <div class="forecast-info">
-      <div class="date">{{weather.dt*1000 | date: 'EEE'}}</div>
-      <div class="day">{{weather.dt*1000 | date:'dd'}}</div>
-      <div class="month">{{weather.dt*1000 | date:'MMM'}}</div>
-      <div class="forecast-icon">
-        <img
-          ng-src="https://openweathermap.org/img/w/{{weather.weather[0].icon}}.png"
-          alt="icon"
-          style="width: 80px; height: 80px;"
-        />
-      </div>
-      <!--<img src='http://openweathermap.org/img/w/" + weatherDataIn.weather[0].icon + ".png'>");-->
-      <!--<dt>Wind</dt>-->
-      <!--<div class="forecast-icon"> <img ng-src='http://openweathermap.org/img/w/{{prediction.weather[0].icon}}.png' style="width:80px;"></div>-->
-      <!--<div class="forecast-icon"><img ng-src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon"        style="width:100px;height:100px;"></div>-->
-      <!--<p><img ng-src="{{getIcon(prediction.weather[0].main)}}"></img></p>-->
-
-      <div class="max">{{weather.temp.max}} &deg;F</div>
-
-      <div class="min">{{weather.temp.min}} &deg;F</div>
-      <!--<div class="forecast-description">{{weather.weather[0].main}}</div>-->
-      <div class="forecast-description">{{weather.weather[0].description}}</div>
-      <!--<div class="humidity">{{weather.humidity.unit}}</div>-->
-    </div>
-  </dl>
-  <p>
-    <a ng-href="#!/current/{{cityID}}" class="btn btn-lg btn-primary"
-      >View Current Weather</a
+    <h1>15-day Forecast</h1>
+    <dl
+      ng-repeat="weather in forecastData.list | limitTo:15:0"
+      class="weather-report description-dl"
     >
-  </p>
-  <p><a ng-href="#!/" class="btn btn-lg btn-primary">Select New City</a></p>
+      <div class="forecast-info">
+        <div class="date">{{weather.dt*1000 | date: 'EEE'}}</div>
+        <div class="day">{{weather.dt*1000 | date:'dd'}}</div>
+        <div class="month">{{weather.dt*1000 | date:'MMM'}}</div>
+        <div class="forecast-icon">
+          <img
+            ng-src="https://openweathermap.org/img/w/{{weather.weather[0].icon}}.png"
+            alt="icon"
+            style="width: 80px; height: 80px;"
+          />
+        </div>
+        <!--<img src='http://openweathermap.org/img/w/" + weatherDataIn.weather[0].icon + ".png'>");-->
+        <!--<dt>Wind</dt>-->
+        <!--<div class="forecast-icon"> <img ng-src='http://openweathermap.org/img/w/{{prediction.weather[0].icon}}.png' style="width:80px;"></div>-->
+        <!--<div class="forecast-icon"><img ng-src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon"        style="width:100px;height:100px;"></div>-->
+        <!--<p><img ng-src="{{getIcon(prediction.weather[0].main)}}"></img></p>-->
+
+        <div class="max">{{weather.temp.max}} &deg;F</div>
+
+        <div class="min">{{weather.temp.min}} &deg;F</div>
+        <!--<div class="forecast-description">{{weather.weather[0].main}}</div>-->
+        <div class="forecast-description">
+          {{weather.weather[0].description}}
+        </div>
+        <!--<div class="humidity">{{weather.humidity.unit}}</div>-->
+      </div>
+    </dl>
+    <p>
+      <a
+        ng-href="#!/current/{{cityID}}"
+        id="current-weather-btn"
+        class="btn btn-lg btn-primary"
+        >View Current Weather</a
+      >
+      <a ng-href="#!/" id="new-city-btn" class="btn btn-lg btn-primary"
+        >Select New City</a
+      >
+    </p>
+    <p></p>
+  </div>
 </div>

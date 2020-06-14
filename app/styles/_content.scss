@@ -1,6 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/"; // bower:scss
- @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
- // endbower
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
 @import "transitions";
 
 .browsehappy {
@@ -110,6 +110,28 @@ dd {
 .container {
   border-bottom: 0;
   /* Remove the bottom border on the jumbotron for visual effect */
+}
+.main-container {
+  zoom: 110%;
+}
+.current-container {
+  zoom: 86%;
+}
+.five-day-container {
+  zoom: 82%;
+}
+.fifteen-day-container {
+  zoom: 82%;
+}
+
+.saved-cities-container {
+  padding-right: 20rem;
+  padding-left: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+#clear-cities-btn {
+  margin-top: 0.5rem;
 }
 
 h2 {
@@ -297,9 +319,21 @@ li a:hover {
     width: 22%;
     padding: 1rem;
   }
+  .saved-cities-container {
+    padding-right: 0rem;
+    padding-left: 0rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 591px) {
+  .saved-cities-container {
+    padding-right: 0rem;
+    padding-left: 0rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .jumbotron h1 {
     font-size: 2.4em;
   }
@@ -328,14 +362,47 @@ li a:hover {
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 300px) and (max-width: 591px) {
+  .jumbotron h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  #find-cities-btn {
+    font-size: 1.5rem;
+  }
+  .main-container {
+    zoom: 130%;
+  }
+  .current-container {
+    zoom: 100%;
+  }
+  .five-day-container {
+    zoom: 110%;
+  }
+  .fifteen-day-container {
+    zoom: 110%;
+  }
   .city-saved-alert {
     border-radius: 0.5em;
     width: 95vw;
     margin-left: auto;
     margin-right: auto;
   }
+  #new-city-btn,
+  #fifteen-day-btn,
+  #five-day-btn,
+  #current-weather-btn {
+    margin-top: 0.75rem;
+  }
 }
 @media only screen and (min-width: 592px) and (max-width: 768px) {
+  .saved-cities-container {
+    padding-right: 5rem;
+    padding-left: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
   dl.weather-report.description-dl.ng-scope {
     height: auto;
     width: 32%;
@@ -349,7 +416,13 @@ li a:hover {
   }
 }
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 768) and (max-width: 992) {
+  .saved-cities-container {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
   dl.weather-report.description-dl.ng-scope {
     height: auto;
     width: 33%;
@@ -359,6 +432,12 @@ li a:hover {
 }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
+  .saved-cities-container {
+    padding-right: 20rem;
+    padding-left: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
   dl.weather-report.description-dl.ng-scope {
     height: 44.5rem;
     width: 15%;
